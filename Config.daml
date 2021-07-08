@@ -1,0 +1,80 @@
+﻿<ArcGIS defaultAssembly="DCADGISTools.dll" defaultNamespace="DCADGISTools" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{ba2bd8a1-1270-4daa-858a-d3b3564bf831}" version="1.0" desktopVersion="2.6.24783">
+    <Name>DCADGISTools</Name>
+    <Description>DCAD specific ribbon that contains ESRI and DCAD tools for use by the GIS Division.</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>BrowneC</Author>
+    <Company>Dallas Central Appraisal District</Company>
+    <Date>7/8/2021 7:07:56 AM</Date>
+    <Subject>Framework</Subject>
+  </AddInInfo>
+  <modules>
+    <insertModule id="DCADGISTools_Module" className="GISToolsModule" autoLoad="false" caption="DCAD GIS Tools Module">
+      <tabs>
+        <tab id="DCADGISTools_Tab1" keytip="t1" caption="GIS Tools Tab">
+          <group refID="DCADGISTools_Group1" />
+          <group refID="DCADGISTools_Group2" />
+          <group refID="DCADGISTools_Group3" />
+          <group refID="DCADGISTools_Group4" />
+          <group refID="DCADGISTools_Group5" />
+        </tab>
+      </tabs>
+      <groups>
+        <group id="DCADGISTools_Group1" keytip="g1" caption="Map Tools" appearsOnAddInTab="false">
+          <button refID="esri_mapping_exploreTool" size="large" />
+          <button refID="esri_mapping_fixedZoomInButton" size="large" />
+          <button refID="esri_mapping_fixedZoomOutButton" size="large" />
+          <button refID="esri_mapping_prevExtentButton" size="large" />
+          <button refID="esri_mapping_nextExtentButton" size="large" />
+          <button refID="esri_mapping_bookmarksNavigateGallery" size="large" />
+          <button refID="esri_editing_measureDirectionDistanceTool" size="large" />
+          <button refID="esri_mapping_layerSwipeTool" size="large" />
+          <button refID="esri_mapping_labelPauseButton" size="large" />
+        </group>
+        <group id="DCADGISTools_Group2" keytip="g2" caption="Query/Locate Tools" appearsOnAddInTab="false">
+          <button refID="esri_mapping_showLocateDockPane" size="large" />
+          <button refID="esri_geoprocessing_selectByAttributeButton" size="large" />
+          <button refID="esri_mapping_clearSelectionButton" size="large" />
+          <button refID="DCADGISTools_DCADQueryPane_ShowButton" size="large" />
+        </group>
+        <group id="DCADGISTools_Group3" keytip="g3" caption="Tasks" appearsOnAddInTab="false">
+          <button refID="esri_tasks_ShowTasks" size="large" />
+        </group>
+        <group id="DCADGISTools_Group4" keytip="g4" caption="Editor Tools" appearsOnAddInTab="false">
+          <button refID="esri_editing_ToggleEditingBtn" size="large" />
+          <button refID="esri_editing_TraverseCommand" size="large" />
+          <button refID="esri_editing_SaveEditsBtn" size="large" />
+          <button refID="esri_editing_DiscardEditsBtn" size="large" />
+          <!--<button refID="esri_EditFeaturesGallery" size="large"/>-->
+          <button refID="esri_editing_ShowAttributes" size="large" />
+          <button refID="esri_mapping_snappingToggleButton" size="large" />
+          <button refID="esri_editing_TopologySelectionComboBox" />
+        </group>
+        <group id="DCADGISTools_Group5" keytip="g5" caption="Resources" appearsOnAddInTab="false">
+          <button refID="DCADGISTools_ButtonLinks_DallasCadBtn" size="large" />
+          <button refID="DCADGISTools_ButtonLinks_DeedSearchBtn" size="large" />
+          <button refID="DCADGISTools_ButtonLinks_DCADwikiBtn" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <button id="DCADGISTools_DCADQueryPane_ShowButton" keytip="b1" caption="DCAD Query Pane" className="DCADQueryPane_ShowButton" loadOnClick="true" smallImage="Images/locateIcon.png" largeImage="Images/locateIcon.png">
+          <tooltip heading="Show DCAD Query Pane">Pane contains tool for querying DCAD parcels<disabledText /></tooltip>
+        </button>
+        <button id="DCADGISTools_ButtonLinks_DallasCadBtn" keytip="b2" caption="DCAD main website" className="DCADGISTools.ButtonLinks.DallasCadBtn" loadOnClick="true" smallImage="Images/DCAD_Logo.png" largeImage="Images/DCAD_Logo.png">
+          <tooltip heading="Open DCAD main website">Opens the dallascad.org website.<disabledText /></tooltip>
+        </button>
+        <button id="DCADGISTools_ButtonLinks_DeedSearchBtn" keytip="b3" caption="County Clerk's website" className="DCADGISTools.ButtonLinks.DeedSearchBtn" loadOnClick="true" smallImage="Images/CountyClerk.png" largeImage="Images/CountyClerk.png">
+          <tooltip heading="Open County Clerk website">Opens the Dallas County records search website.<disabledText /></tooltip>
+        </button>
+        <button id="DCADGISTools_ButtonLinks_DCADwikiBtn" keytip="b4" caption="DCADwikiBtn" className="DCADGISTools.ButtonLinks.DCADwikiBtn" loadOnClick="true" smallImage="Images/DCAD_GIS_Logo_small.png" largeImage="Images/DCAD_GIS_Logo_small.png">
+          <tooltip heading="Open the DCAD wiki">Opens the internal DCAD wiki page for GIS users.<disabledText /></tooltip>
+        </button>
+      </controls>
+      <dockPanes>
+        <dockPane id="DCADGISTools_DCADQueryPane" caption="DCAD Query Pane" className="DCADQueryPaneViewModel" dock="group" dockWith="esri_core_contentsDockPane">
+          <content className="DCADQueryPaneView" />
+        </dockPane>
+      </dockPanes>
+    </insertModule>
+  </modules>
+</ArcGIS>

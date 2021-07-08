@@ -1,0 +1,104 @@
+﻿<UserControl x:Class="DCADGISTools.DCADQueryPaneView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"   
+             xmlns:ui="clr-namespace:DCADGISTools"
+             xmlns:extensions="clr-namespace:ArcGIS.Desktop.Extensions;assembly=ArcGIS.Desktop.Extensions"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" 
+             d:DesignWidth="300"
+             d:DataContext="{Binding Path=ui.DCADQueryPaneViewModel}"
+             Background="#FF4C6AA2"
+             Foreground="White">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <extensions:DesignOnlyResourceDictionary Source="pack://application:,,,/ArcGIS.Desktop.Framework;component\Themes\Default.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Grid.Row="1" Height="595" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="91"/>
+            <RowDefinition Height="91"/>
+            <RowDefinition Height="49"/>
+            <RowDefinition Height="49"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <Style x:Key="alternatingWithTriggers" TargetType="{x:Type ListBoxItem}">
+                <Setter Property="Background" Value="LightBlue"/>
+                <Setter Property="Foreground" Value="Navy"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Style.Triggers>
+                    <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                        <Setter Property="Background" Value="WhiteSmoke"/>
+                        <Setter Property="Foreground" Value="Navy"/>
+                    </Trigger>
+                    <Trigger Property="ItemsControl.AlternationIndex" Value="2">
+                        <Setter Property="Background" Value="WhiteSmoke"/>
+                        <Setter Property="Foreground" Value="Navy"/>
+                    </Trigger>
+                    <Trigger Property="ItemsControl.AlternationIndex" Value="3">
+                        <Setter Property="Background" Value="WhiteSmoke"/>
+                        <Setter Property="Foreground" Value="Navy"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </Grid.Resources>
+
+        <DockPanel Grid.Row="0" LastChildFill="true" KeyboardNavigation.TabNavigation="Local" Height="30">
+            <TextBlock Grid.Column="1" Text="{Binding Heading}" Style="{DynamicResource Esri_TextBlockDockPaneHeader}" Foreground="White">
+                <TextBlock.ToolTip>
+                    <WrapPanel Orientation="Vertical" MaxWidth="300">
+                        <TextBlock Text="{Binding Heading}" TextWrapping="Wrap"/>
+                    </WrapPanel>
+                </TextBlock.ToolTip>
+      </TextBlock>
+        </DockPanel>
+
+        <!--ComboBox to select queryable layer-->
+        <TextBlock Margin="10,16,0,57" Grid.Row="1" HorizontalAlignment="Left" Width="69">Layer Input</TextBlock>
+        <ComboBox x:Name="QueryLayerInput" Grid.Row="1" Margin="10,36,10,15" HorizontalAlignment="Stretch"
+                  ToolTip="If query type is missing from list &#x0a; the layer is not in the map. &#x0a; PARCEL_VIEW, SimultaneousConveyance, &#x0a; Block or ParcelFabric_Parcels."
+                  DropDownOpened="QueryLayerInput_DropDownOpened" Unloaded="QueryLayerInput_Unloaded" FontWeight="Bold"
+                  SelectionChanged="QueryLayerInput_SelectionChanged" Background="#FFDAE2EB" Foreground="#FF4C6AA2" 
+                  BorderBrush="White" Height="Auto"/>
+
+        <!--TextBox for user query input-->
+        <TextBlock Margin="10,10,0,57" Grid.Row="2" HorizontalAlignment="Left" Width="80">Query Input</TextBlock>
+        <TextBox x:Name="userTextInput" Grid.Row="2" Margin="10,39,10,10" HorizontalAlignment="Stretch"
+                 Text="Please put your query here." TextChanged="userTextInput_TextChanged" KeyDown="userTextInput_KeyDown"
+                 MouseDoubleClick="userTextInput_MouseDoubleClick" Foreground="#FF4C6AA2" BorderBrush="White" 
+                 Unloaded="userTextInput_Unloaded"/>
+
+        <!--Button to kick off query-->
+        <Button x:Name="queryBtn" Content="Query" Grid.Row="3" Click="queryBtn_Click" FontWeight="Bold" BorderBrush="White"
+                Foreground="#FF4C6AA2" Background="#FFDAE2EB" Margin="10,10,0,0"
+                HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+                VerticalAlignment="Top" HorizontalAlignment="Left" Height="29" Width="60"/>
+
+        <Button x:Name="clearBtn" Content="Clear" Grid.Row="3" FontWeight="Bold" BorderBrush="White"
+                Foreground="#FF4C6AA2" Background="#FFDAE2EB" Margin="0,10,10,0"
+                HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                VerticalAlignment="Top" HorizontalAlignment="Right" Height="29" Width="60"
+                Command="{Binding ClearSelectionTool}" RenderTransformOrigin="-0.22,0.498"/>
+
+        <!--ListBox to return results, as allow user to interact with (click & zoom to) results-->
+        <TextBlock Margin="10,10,0,0" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="164">Results</TextBlock>
+        <ListBox x:Name="resultBox" SelectionChanged="resultBox_SelectionChanged" Grid.Row="5" 
+                 HorizontalAlignment="Stretch"
+                 ItemContainerStyle="{StaticResource alternatingWithTriggers}" 
+                 Foreground="#FF4C6AA2" BorderBrush="White" VerticalAlignment="Top" Margin="10,0">
+            <ListBox.ItemBindingGroup>
+                <BindingGroup/>
+            </ListBox.ItemBindingGroup>
+        </ListBox>
+
+    </Grid>
+</UserControl>

@@ -135,13 +135,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DCAD.MapLayerControl\DCAD.MapLayerControl.csproj">
+      <Project>{9db1aeb6-6a70-4631-b202-0ce544d48a93}</Project>
+      <Name>DCAD.MapLayerControl</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DCAD.MapUtilities\DCAD.MapUtilities.csproj">
       <Project>{6f686e1c-c6aa-45f2-a1ea-00835f48fae0}</Project>
       <Name>DCAD.MapUtilities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MapLayerControl\DCAD.MapLayerControl.csproj">
-      <Project>{9db1aeb6-6a70-4631-b202-0ce544d48a93}</Project>
-      <Name>DCAD.MapLayerControl</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

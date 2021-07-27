@@ -60,7 +60,7 @@
         <button id="DCADGISTools_DCADQueryPane_ShowButton" keytip="b1" caption="DCAD Query Pane" className="DCADQueryPane_ShowButton" loadOnClick="true" smallImage="Images/locateIcon.png" largeImage="Images/locateIcon.png">
           <tooltip heading="Show DCAD Query Pane">Pane contains tool for querying DCAD parcels<disabledText /></tooltip>
         </button>
-        <button id="DCADGISTools_ButtonLinks_DallasCadBtn" keytip="b2" caption="DCAD main website" className="DCADGISTools.ButtonLinks.DallasCadBtn" loadOnClick="true" smallImage="Images/DCAD_Logo.png" largeImage="Images/DCAD_Logo.png">
+        <button id="DCADGISTools_ButtonLinks_DallasCadBtn" keytip="b2" caption="DCAD main website" className="DCADGISTools.ButtonLinks.DallasCadBtn" loadOnClick="true" smallImage="Images/DCAD_Main_Logo_small.png" largeImage="Images/DCAD_Main_Logo_small.png">
           <tooltip heading="Open DCAD main website">Opens the dallascad.org website.<disabledText /></tooltip>
         </button>
         <button id="DCADGISTools_ButtonLinks_DeedSearchBtn" keytip="b3" caption="County Clerk's website" className="DCADGISTools.ButtonLinks.DeedSearchBtn" loadOnClick="true" smallImage="Images/CountyClerk.png" largeImage="Images/CountyClerk.png">

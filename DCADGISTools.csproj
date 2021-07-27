@@ -153,8 +153,11 @@
   <ItemGroup>
     <AddInContent Include="Images\CountyClerk.png" />
     <AddInContent Include="Images\DCAD_GIS_Logo_small.png" />
-    <AddInContent Include="Images\DCAD_Logo.png" />
+    <AddInContent Include="Images\DCAD_Logo_clearBackground.png" />
     <AddInContent Include="Images\locateIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\DCAD_Main_Logo_small.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!--

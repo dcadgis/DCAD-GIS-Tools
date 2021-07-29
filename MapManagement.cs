@@ -102,17 +102,5 @@ namespace DCADGISTools
         }
         #endregion
 
-        public static void UnselectFeatures()
-        {
-            var mapView = MapView.Active;
-            if (mapView == null)
-                return;
-
-            //var selectedFeatures = mapView.Map.GetSelection()
-            //.Where(kvp => kvp.Key is BasicFeatureLayer)
-            //.ToDictionary(kvp => (BasicFeatureLayer)kvp.Key, kvp => kvp.Value);
-
-            mapView.ClearSketchAsync();
-        }
     }
 }

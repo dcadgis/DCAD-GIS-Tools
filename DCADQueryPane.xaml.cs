@@ -103,11 +103,9 @@ namespace DCADGISTools
 
         private void userTextInput_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            MapManagement.UnselectFeatures();
             userTextInput.Clear();
             userInput = "";
             resultBox.Items.Clear();
-
         }
 
         private void userTextInput_TextChanged(object sender, TextChangedEventArgs e)

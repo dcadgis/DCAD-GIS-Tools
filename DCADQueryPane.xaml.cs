@@ -31,7 +31,7 @@ namespace DCADGISTools
         internal static string qGDB = "";
         internal static string userInput = "";
         internal static string queryInput;
-        #endregion
+        #endregion 
 
         #region COMBOBOX Dropdown controls
         private void QueryLayerInput_DropDownOpened(object sender, EventArgs e)

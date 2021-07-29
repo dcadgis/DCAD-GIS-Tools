@@ -26,7 +26,7 @@ The basic ArcGIS Pro functions and tools are no different in the GIS Tools Tab, 
 
 ### DCAD Query Pane
 
-![DCADToolTabs](./DCADToolTabs/Images/locateIcon.png)
+![DCADGISTools](./Images/locateIcon.png)
 
 This tool opens the DCAD Query Pane dockable window with a combo box, a user text box input and a result, list box for the user to query the DCAD feature classes in the active map.
 

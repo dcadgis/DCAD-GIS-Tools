@@ -5,12 +5,6 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCADGISTools", "DCADGISTools.csproj", "{BA2BD8A1-1270-4DAA-858A-D3B3564BF831}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DCADGIS", "DCADGIS", "{7E6C0C33-F5AD-453D-9D66-F1E058461069}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCAD.MapUtilities", "..\DCAD.MapUtilities\DCAD.MapUtilities.csproj", "{6F686E1C-C6AA-45F2-A1EA-00835F48FAE0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCAD.MapLayerControl", "..\DCAD.MapLayerControl\DCAD.MapLayerControl.csproj", "{9DB1AEB6-6A70-4631-B202-0CE544D48A93}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,21 +15,9 @@ Global
 		{BA2BD8A1-1270-4DAA-858A-D3B3564BF831}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA2BD8A1-1270-4DAA-858A-D3B3564BF831}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA2BD8A1-1270-4DAA-858A-D3B3564BF831}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F686E1C-C6AA-45F2-A1EA-00835F48FAE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F686E1C-C6AA-45F2-A1EA-00835F48FAE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F686E1C-C6AA-45F2-A1EA-00835F48FAE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F686E1C-C6AA-45F2-A1EA-00835F48FAE0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DB1AEB6-6A70-4631-B202-0CE544D48A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DB1AEB6-6A70-4631-B202-0CE544D48A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DB1AEB6-6A70-4631-B202-0CE544D48A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DB1AEB6-6A70-4631-B202-0CE544D48A93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{6F686E1C-C6AA-45F2-A1EA-00835F48FAE0} = {7E6C0C33-F5AD-453D-9D66-F1E058461069}
-		{9DB1AEB6-6A70-4631-B202-0CE544D48A93} = {7E6C0C33-F5AD-453D-9D66-F1E058461069}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C9CEE9D0-A6A3-44A3-BD4B-8BE5BC716DEE}

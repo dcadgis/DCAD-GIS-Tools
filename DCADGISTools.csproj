@@ -44,6 +44,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -133,16 +134,11 @@
     <Compile Include="GISToolsModule.cs" />
     <Compile Include="MapManagement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DCAD.MapLayerControl\DCAD.MapLayerControl.csproj">
-      <Project>{9db1aeb6-6a70-4631-b202-0ce544d48a93}</Project>
-      <Name>DCAD.MapLayerControl</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DCAD.MapUtilities\DCAD.MapUtilities.csproj">
-      <Project>{6f686e1c-c6aa-45f2-a1ea-00835f48fae0}</Project>
-      <Name>DCAD.MapUtilities</Name>
-    </ProjectReference>
+    <Compile Include="Repository\QueryLayer.cs" />
+    <Compile Include="Repository\QueryLayerRepository.cs" />
+    <Compile Include="Repository\QueryType.cs" />
+    <Compile Include="Utilities\ErrorLog.cs" />
+    <Compile Include="Utilities\QueryUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="DCADQueryPane.xaml">

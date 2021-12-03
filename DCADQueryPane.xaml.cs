@@ -7,8 +7,10 @@ using System.Windows.Input;
 using ArcGIS.Desktop.Framework.Threading.Tasks;
 using ArcGIS.Desktop.Mapping;
 using ArcGIS.Core.Data;
-using MapLayerControl;
-using DCAD.MapUtilities;
+//using MapLayerControl;
+//using DCAD.MapUtilities;
+using DCADGISTools.Repository;
+using DCADGISTools.Utilities;
 
 namespace DCADGISTools
 {
@@ -20,7 +22,7 @@ namespace DCADGISTools
         #region Initialize Command
         public DCADQueryPaneView()
         {
-            InitializeComponent();
+            InitializeComponent();         
         }
         #endregion
 
@@ -43,6 +45,7 @@ namespace DCADGISTools
             var validLayerCount = QueryLayerInput.Items.Count;
 
             // Get the query types available for the drop down list
+            //Dictionary<string, string> queryType = QueryType.GetQueryType();
             Dictionary<string, string> queryType = QueryType.GetQueryType();
 
             if (validLayerCount <= 0)
@@ -59,8 +62,6 @@ namespace DCADGISTools
                     }
                 }
             }
-
-
         }
 
         private void QueryLayerInput_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -154,22 +155,30 @@ namespace DCADGISTools
         {
             try
             {
-                var selectedLayer = (FeatureLayer)MapView.Active.GetSelectedLayers().OfType<FeatureLayer>().FirstOrDefault();
-
-                if (resultBox.SelectedIndex >= 0)
+                if (userInput != "")
                 {
-                    queryInput = resultBox.SelectedItem.ToString();
+                    var selectedLayer = (FeatureLayer)MapView.Active.GetSelectedLayers().OfType<FeatureLayer>().FirstOrDefault();
+
+                    if (resultBox.SelectedIndex >= 0)
+                    {
+                        queryInput = resultBox.SelectedItem.ToString();
+                    }
+
+                    string wClause = string.Format("{0}='{1}'", qClause, queryInput);
+
+                    await QueuedTask.Run(() =>
+                    {
+                        FeatureLayer fLyr = selectedLayer as FeatureLayer;
+                        QueryFilter qf = new QueryFilter { WhereClause = wClause };
+                        fLyr.Select(qf);
+                        MapView.Active.ZoomToSelected();
+                    });
                 }
-
-                string wClause = string.Format("{0}='{1}'", qClause, queryInput);
-
-                await QueuedTask.Run(() =>
+                else
                 {
-                    FeatureLayer fLyr = selectedLayer as FeatureLayer;
-                    QueryFilter qf = new QueryFilter { WhereClause = wClause };
-                    fLyr.Select(qf);
-                    MapView.Active.ZoomToSelected();
-                });
+                    return;
+                }
+                
             }
             catch (Exception ex)
             {
@@ -232,8 +241,6 @@ namespace DCADGISTools
             {
                 ErrorLog.Log(ex);
             }
-
-
         }
 
         #endregion

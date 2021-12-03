@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"   
              xmlns:ui="clr-namespace:DCADGISTools"
              xmlns:extensions="clr-namespace:ArcGIS.Desktop.Extensions;assembly=ArcGIS.Desktop.Extensions"
-             xmlns:themes="http://schemas.actiprosoftware.com/winfx/xaml/themes" x:Class="DCADGISTools.DCADQueryPaneView"
+             xmlns:themes="http://schemas.actiprosoftware.com/winfx/xaml/themes" x:Name="QueryPane" x:Class="DCADGISTools.DCADQueryPaneView"
              mc:Ignorable="d" 
              d:DesignHeight="600" 
              d:DesignWidth="300"

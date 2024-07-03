@@ -1,0 +1,6 @@
+C:\Users\brownec\source\repos\DCAD.MapUtilities\bin\Debug\DCAD.MapUtilities.dll
+C:\Users\brownec\source\repos\DCAD.MapUtilities\bin\Debug\DCAD.MapUtilities.pdb
+C:\Users\brownec\source\repos\DCAD.MapUtilities\obj\Debug\DCAD.MapUtilities.csproj.AssemblyReference.cache
+C:\Users\brownec\source\repos\DCAD.MapUtilities\obj\Debug\DCAD.MapUtilities.csproj.CoreCompileInputs.cache
+C:\Users\brownec\source\repos\DCAD.MapUtilities\obj\Debug\DCAD.MapUtilities.dll
+C:\Users\brownec\source\repos\DCAD.MapUtilities\obj\Debug\DCAD.MapUtilities.pdb

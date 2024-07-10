@@ -72,10 +72,10 @@
                   SelectionChanged="QueryLayerInput_SelectionChanged" 
                   BorderBrush="White" Height="Auto">
             <ComboBox.Foreground>
-                <SolidColorBrush Color="#FF4C6AA2" themes:TintGroup.Name="ToolBarEdit"/>
+                <SolidColorBrush Color="#FF4C6AA2"/>
             </ComboBox.Foreground>
             <ComboBox.Background>
-                <SolidColorBrush Color="#FFDAE2EB" themes:TintGroup.Name="ToolBarEdit"/>
+                <SolidColorBrush Color="#FFDAE2EB"/>
             </ComboBox.Background>
         </ComboBox>
 

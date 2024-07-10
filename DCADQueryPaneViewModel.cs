@@ -31,15 +31,21 @@ namespace DCADGISTools
         /// </summary>
         internal static void Show()
         {
+#pragma warning disable CA1416 // Validate platform compatibility
             DockPane pane = FrameworkApplication.DockPaneManager.Find(_dockPaneID);
+#pragma warning restore CA1416 // Validate platform compatibility
             if (pane == null)
                 return;
 
+#pragma warning disable CA1416 // Validate platform compatibility
             pane.Activate();
+#pragma warning restore CA1416 // Validate platform compatibility
         }
 
         #region esri ClearSelectionTool button binding.
+#pragma warning disable CA1416 // Validate platform compatibility
         public ICommand ClearSelectionTool { get { return FrameworkApplication.GetPlugInWrapper("esri_mapping_clearSelectionButton") as ICommand; } }
+#pragma warning restore CA1416 // Validate platform compatibility
         #endregion
 
         /// <summary>
@@ -51,7 +57,9 @@ namespace DCADGISTools
             get { return _heading; }
             set
             {
+#pragma warning disable CA1416 // Validate platform compatibility
                 SetProperty(ref _heading, value, () => Heading);
+#pragma warning restore CA1416 // Validate platform compatibility
             }
         }
     }

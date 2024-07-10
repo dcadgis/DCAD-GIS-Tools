@@ -1,41 +1,48 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31424.327
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCADGISTools", "DCADGISTools.csproj", "{BA2BD8A1-1270-4DAA-858A-D3B3564BF831}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DCADGISTools", "DCADGISTools.csproj", "{BA2BD8A1-1270-4DAA-858A-D3B3564BF831}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DCADGIS", "DCADGIS", "{7E6C0C33-F5AD-453D-9D66-F1E058461069}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DCAD.MapUtilities", "..\DCAD.MapUtilities\DCAD.MapUtilities.csproj", "{EB0F7185-2E41-4D13-9F9E-D6D7C6FEDB30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCAD.MapUtilities", "..\DCAD.MapUtilities\DCAD.MapUtilities.csproj", "{6F686E1C-C6AA-45F2-A1EA-00835F48FAE0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCAD.MapLayerControl", "..\DCAD.MapLayerControl\DCAD.MapLayerControl.csproj", "{9DB1AEB6-6A70-4631-B202-0CE544D48A93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DCAD.MapLayerControl", "..\DCAD.MapLayerControl\DCAD.MapLayerControl.csproj", "{EB03B250-3A93-4DAC-875B-D013B55BAAC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BA2BD8A1-1270-4DAA-858A-D3B3564BF831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BA2BD8A1-1270-4DAA-858A-D3B3564BF831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA2BD8A1-1270-4DAA-858A-D3B3564BF831}.Debug|x64.ActiveCfg = Debug|x64
+		{BA2BD8A1-1270-4DAA-858A-D3B3564BF831}.Debug|x64.Build.0 = Debug|x64
 		{BA2BD8A1-1270-4DAA-858A-D3B3564BF831}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA2BD8A1-1270-4DAA-858A-D3B3564BF831}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6F686E1C-C6AA-45F2-A1EA-00835F48FAE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6F686E1C-C6AA-45F2-A1EA-00835F48FAE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6F686E1C-C6AA-45F2-A1EA-00835F48FAE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6F686E1C-C6AA-45F2-A1EA-00835F48FAE0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DB1AEB6-6A70-4631-B202-0CE544D48A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DB1AEB6-6A70-4631-B202-0CE544D48A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DB1AEB6-6A70-4631-B202-0CE544D48A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DB1AEB6-6A70-4631-B202-0CE544D48A93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA2BD8A1-1270-4DAA-858A-D3B3564BF831}.Release|x64.ActiveCfg = Release|x64
+		{BA2BD8A1-1270-4DAA-858A-D3B3564BF831}.Release|x64.Build.0 = Release|x64
+		{EB0F7185-2E41-4D13-9F9E-D6D7C6FEDB30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB0F7185-2E41-4D13-9F9E-D6D7C6FEDB30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB0F7185-2E41-4D13-9F9E-D6D7C6FEDB30}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EB0F7185-2E41-4D13-9F9E-D6D7C6FEDB30}.Debug|x64.Build.0 = Debug|Any CPU
+		{EB0F7185-2E41-4D13-9F9E-D6D7C6FEDB30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB0F7185-2E41-4D13-9F9E-D6D7C6FEDB30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB0F7185-2E41-4D13-9F9E-D6D7C6FEDB30}.Release|x64.ActiveCfg = Release|Any CPU
+		{EB0F7185-2E41-4D13-9F9E-D6D7C6FEDB30}.Release|x64.Build.0 = Release|Any CPU
+		{EB03B250-3A93-4DAC-875B-D013B55BAAC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB03B250-3A93-4DAC-875B-D013B55BAAC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB03B250-3A93-4DAC-875B-D013B55BAAC6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EB03B250-3A93-4DAC-875B-D013B55BAAC6}.Debug|x64.Build.0 = Debug|Any CPU
+		{EB03B250-3A93-4DAC-875B-D013B55BAAC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB03B250-3A93-4DAC-875B-D013B55BAAC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB03B250-3A93-4DAC-875B-D013B55BAAC6}.Release|x64.ActiveCfg = Release|Any CPU
+		{EB03B250-3A93-4DAC-875B-D013B55BAAC6}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{6F686E1C-C6AA-45F2-A1EA-00835F48FAE0} = {7E6C0C33-F5AD-453D-9D66-F1E058461069}
-		{9DB1AEB6-6A70-4631-B202-0CE544D48A93} = {7E6C0C33-F5AD-453D-9D66-F1E058461069}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C9CEE9D0-A6A3-44A3-BD4B-8BE5BC716DEE}

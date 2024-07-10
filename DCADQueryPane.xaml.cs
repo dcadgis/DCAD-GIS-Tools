@@ -163,6 +163,7 @@ namespace DCADGISTools
 
                 string wClause = string.Format("{0}='{1}'", qClause, queryInput);
 
+#pragma warning disable CA1416 // Validate platform compatibility
                 await QueuedTask.Run(() =>
                 {
                     FeatureLayer fLyr = selectedLayer as FeatureLayer;
@@ -170,6 +171,7 @@ namespace DCADGISTools
                     fLyr.Select(qf);
                     MapView.Active.ZoomToSelected();
                 });
+#pragma warning restore CA1416 // Validate platform compatibility
             }
             catch (Exception ex)
             {
@@ -218,7 +220,9 @@ namespace DCADGISTools
                 }
                 else
                 {
+#pragma warning disable CA1416 // Validate platform compatibility
                     var results = await QueuedTask.Run(() => QueryUtilities.GetSearchResultsArray(userInput, qId, qGDB));
+#pragma warning restore CA1416 // Validate platform compatibility
 
                     results.TrimToSize();
 

@@ -31,14 +31,20 @@ namespace DCADGISTools
         #region OpenMap()- Activate a map based on the map's name.
         internal static void OpenMap()
         {
+#pragma warning disable CA1416 // Validate platform compatibility
             var mapPanes = ProApp.Panes.OfType<IMapPane>();
+#pragma warning restore CA1416 // Validate platform compatibility
             foreach (Pane pane in mapPanes)
             {
+#pragma warning disable CA1416 // Validate platform compatibility
                 if (pane.Caption == "MetesAndBounds_Map")
                 {
+#pragma warning disable CA1416 // Validate platform compatibility
                     pane.Activate();
+#pragma warning restore CA1416 // Validate platform compatibility
                     break;
                 }
+#pragma warning restore CA1416 // Validate platform compatibility
             }
         }
         #endregion
@@ -83,6 +89,7 @@ namespace DCADGISTools
         #region FlashSelectedFeaturesAsync()- Flashes selected features in map. (WORKING)
         public static Task FlashSelectedFeaturesAsync()
         {
+#pragma warning disable CA1416 // Validate platform compatibility
             return QueuedTask.Run(() =>
             {
                 //Get the active map view.
@@ -91,13 +98,23 @@ namespace DCADGISTools
                     return;
 
                 //Get the selected features from the map and filter out the standalone table selection.
-                var selectedFeatures = mapView.Map.GetSelection()
-                  .Where(kvp => kvp.Key is BasicFeatureLayer)
-                  .ToDictionary(kvp => (BasicFeatureLayer)kvp.Key, kvp => kvp.Value);
+                // Deprecated at 3.x and above
+                // https://pro.arcgis.com/en/pro-app/latest/sdk/api-reference/topic11876.html
+                // ************************************************************************************
+                // var selectedFeatures = mapView.Map.GetSelection()
+                //  .Where(kvp => kvp.Key is BasicFeatureLayer)
+                //  .ToDictionary(kvp => (BasicFeatureLayer)kvp.Key, kvp => kvp.Value);
 
-                //Flash the collection of features.
+                // Flash the collection of features.
+                // mapView.FlashFeature(selectedFeatures);
+                // ************************************************************************************
+
+                var selectedFeatures = mapView.Map.GetSelection();
+
+                // Flash the collection of features.
                 mapView.FlashFeature(selectedFeatures);
             });
+#pragma warning restore CA1416 // Validate platform compatibility
 
         }
         #endregion

@@ -1,6 +1,0 @@
-C:\Users\brownec\source\repos\MapLayerControl\obj\Debug\DCAD.MapLayerControl.csproj.AssemblyReference.cache
-C:\Users\brownec\source\repos\MapLayerControl\obj\Debug\DCAD.MapLayerControl.csproj.CoreCompileInputs.cache
-C:\Users\brownec\source\repos\MapLayerControl\bin\Debug\DCAD.MapLayerControl.dll
-C:\Users\brownec\source\repos\MapLayerControl\bin\Debug\DCAD.MapLayerControl.pdb
-C:\Users\brownec\source\repos\MapLayerControl\obj\Debug\DCAD.MapLayerControl.dll
-C:\Users\brownec\source\repos\MapLayerControl\obj\Debug\DCAD.MapLayerControl.pdb

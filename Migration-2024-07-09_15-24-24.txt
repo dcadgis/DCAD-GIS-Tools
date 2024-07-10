@@ -1,0 +1,9 @@
+Migration Status Report
+  Migrate project: C:\Users\FELLJ\source\repos\dcadgis04\DCAD-GIS-Tools\DCADGISTools.csproj
+  DCADGISTools.csproj
+   project folder: 
+   C:\Users\FELLJ\source\repos\dcadgis04\DCAD-GIS-Tools\
+   C:\Users\FELLJ\source\repos\dcadgis04\DCAD-GIS-Tools\
+   language: CS
+   project type: AddIn
+   project has WPF: PresentationFramework

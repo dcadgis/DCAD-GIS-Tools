@@ -1,5 +1,6 @@
-﻿<ArcGIS defaultAssembly="DCADGISTools.dll" defaultNamespace="DCADGISTools" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
-  <AddInInfo id="{ba2bd8a1-1270-4daa-858a-d3b3564bf831}" version="1.0" desktopVersion="2.6.24783">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArcGIS defaultAssembly="DCADGISTools.dll" defaultNamespace="DCADGISTools" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{ba2bd8a1-1270-4daa-858a-d3b3564bf831}" version="1.0" desktopVersion="3.3.52636">
     <Name>DCADGISTools</Name>
     <Description>DCAD specific ribbon that contains ESRI and DCAD tools for use by the GIS Division.</Description>
     <Image>Images\AddinDesktop32.png</Image>
